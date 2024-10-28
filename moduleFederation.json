@@ -1,0 +1,5 @@
+{
+	"exposes": {
+		"Hello": "./src/modules/Hello"
+	}
+}

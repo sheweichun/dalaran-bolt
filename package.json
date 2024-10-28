@@ -1,0 +1,19 @@
+{
+  "name": "@ali/ai-chat-list",
+  "version": "0.0.1",
+  "description": "ai-chat-list",
+  "author": "洛丹",
+  "scripts": {
+    "start": "material-scripts start merchant"
+  },
+  "dependencies": {
+    "typescript": "^4.3.5",
+    "@types/react": "^16.9.56",
+    "@ali/merchant-platform-common-utils": "^1.6.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "@alifd/next": "1.25.49",
+    "moment": "2.27.0"
+  },
+  "devDependencies": {}
+}
