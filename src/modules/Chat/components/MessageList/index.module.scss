@@ -1,0 +1,69 @@
+.con{
+    flex: 1;
+    width: 100%;
+    min-height: 1px;
+    padding-top: 12px;
+}
+.wrap{
+    width: 100%;
+    max-width: 552px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll{
+    height: 100%;
+    overflow-y: auto;
+    margin-right: -16px;
+}
+
+.card{
+    margin: 0 28px ;
+    background: linear-gradient(#262626 max(calc(100% - 100vh), 30%), #262626 100%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.user{
+    display: flex;
+    gap: 16px;
+}
+
+.userLeft{
+    background-color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: #A3A3A3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    align-items: center;
+    user-select: none;
+    flex-shrink: 0;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.userRight{
+    line-height: 24px;
+    flex:1;
+    min-width: 1px;
+    overflow: hidden;
+    padding: 0 0 4px;
+}
+
+.attachment{
+    display: flex;
+    gap: 14px;
+}

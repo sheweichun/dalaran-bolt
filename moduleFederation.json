@@ -1,5 +1,5 @@
 {
 	"exposes": {
-		"Hello": "./src/modules/Hello"
+		"Chat": "./src/modules/Chat"
 	}
 }

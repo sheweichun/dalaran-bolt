@@ -1,0 +1,51 @@
+.content {
+    /* border-color: rgba(0, 0, 0, .1); */
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    margin-right: 4px;
+    flex:1;
+    min-width: 1px;
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* justify-content: center; */
+    // background-color: rgb(247 247 247);
+    background-color: white;
+    user-select: none;
+    overflow-x: auto;
+}
+
+.iframeMask{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.wrap{
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+}
+
+.leftHand, .rightHand{
+    width: 5px;
+    height: 35px;
+    background-color: rgb(161 161 170);
+    border-radius: 9999px;
+    position: absolute;
+    top: 50%;    
+    transform: translateY(-50%);
+    cursor: col-resize;
+}
+
+.leftHand{
+    left: 3px;
+}
+
+.rightHand{
+    right: 3px;
+}

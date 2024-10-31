@@ -1,0 +1,110 @@
+.btn{
+    padding: 4px;
+    color: #ffffff80;
+    // border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border:0;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover{
+        // filter: brightness(.94);
+        color: white;
+        background-color: #ffffff1a;
+    }
+    :global{
+        .icon{
+            font-size: 18px;
+        }
+    }
+}
+
+
+.listCon{
+    background-color: rgb(10, 10, 10);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.list{
+    padding: 0 20px;
+    gap: 20px;
+    display: flex;
+}
+
+
+.attachmentCon{
+    position: relative;
+    border-radius: 8px;
+    border-color: #ffffff1a;
+    border-style: solid;
+    overflow: hidden;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    // cursor: pointer;
+}
+
+.img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.iconBtn{
+    background-color: #262626;
+    color: #ffffff;
+    border-radius: 9999px;
+    border-color: #ffffff1a;
+    border-width: 1px;
+    // padding: 2px;
+    border-style: solid;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transform: translate(50%, -50%);
+    &:hover{
+        background-color: #404040;
+    }
+}
+
+
+.fileType{
+    background-color: rgba(43,166,255,.2);
+    text-transform: uppercase;
+    color: rgb(20,136,252);
+    font-size: 12px;
+    line-height: 16px;
+    padding: 2px 6px;
+    border-radius: 999999px;
+    margin-bottom: 8px;
+}
+
+.fileName{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80%;
+    color: white;
+}

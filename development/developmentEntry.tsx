@@ -1,5 +1,5 @@
 import React from 'react';
-import Hello from '../src/modules/Hello';
+import Hello from '../src/modules/Chat';
 
 function DevEntry() {
 	return (
