@@ -19,6 +19,7 @@ export enum AttachmentStatus{
 export interface IAttachment{
     type: AttachmentType,
     status: AttachmentStatus,
+    mimeType: string
     name: string,
     content: string,
     file?: File
@@ -74,25 +75,18 @@ export function AttachmentFile({item, onClick}: {item: IAttachment, onClick?: ()
 
 export function useUploadHook(){
     const [ files, setFiles ] = useState<IAttachment[]>([
-        {
-            type: AttachmentType.Image,
-            content:'https://img.alicdn.com/imgextra/i4/O1CN019imKkM1Qid4YlogUL_!!6000000002010-2-tps-1928-748.png',
-            name: 'test.png',
-            status: AttachmentStatus.Uploaded
-        },
-        {
-            type: AttachmentType.File,
-            content:'https://img.alicdn.com/imgextra/i4/O1CN019imKkM1Qid4YlogUL_!!6000000002010-2-tps-1928-748.png',
-            name: 'AAOrisnakldjaOrisnakldjaOrisnakldja',
-            fileType: 'md',
-            status: AttachmentStatus.Uploaded
-        }
-        // ,{
+        // {
+        //     type: AttachmentType.Image,
+        //     content:'https://img.alicdn.com/imgextra/i4/O1CN019imKkM1Qid4YlogUL_!!6000000002010-2-tps-1928-748.png',
+        //     name: 'test.png',
+        //     status: AttachmentStatus.Uploaded
+        // },
+        // {
         //     type: AttachmentType.File,
         //     content:'https://img.alicdn.com/imgextra/i4/O1CN019imKkM1Qid4YlogUL_!!6000000002010-2-tps-1928-748.png',
-        //     name: 'aaaaa',
+        //     name: 'AAOrisnakldjaOrisnakldjaOrisnakldja',
         //     fileType: 'md',
-        //     status: AttachmentStatus.Uploading
+        //     status: AttachmentStatus.Uploaded
         // }
     ] as IAttachment[])
 
@@ -105,6 +99,9 @@ export function useUploadHook(){
 
     return {
         files,
+        onClear: () => {
+            setFiles([]);
+        },
         onAdd: (newFiles: IAttachment[]) => {
             const needAddFiles: IAttachment[] = []
             newFiles.forEach(file => {
@@ -169,6 +166,7 @@ export function AttachmentUpload({onAddFiles}:{onAddFiles: (files: IAttachment[]
                 // const base64 = await convertToBase64(curFile)
                 attachmentFiles.push({
                     type: AttachmentType.Image,
+                    mimeType: curFile.type,
                     content: '',
                     name: curFile.name,
                     file: curFile,
@@ -180,6 +178,7 @@ export function AttachmentUpload({onAddFiles}:{onAddFiles: (files: IAttachment[]
                 attachmentFiles.push({
                     type: AttachmentType.File,
                     fileType: fileType,
+                    mimeType: curFile.type,
                     content: '',
                     file: curFile,
                     status: AttachmentStatus.Uploaded,

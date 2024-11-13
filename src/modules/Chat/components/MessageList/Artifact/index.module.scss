@@ -1,0 +1,120 @@
+.con{
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background-color: #171717;
+}
+
+
+.conHeader{
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+}
+
+.conHeaderTitle{
+    padding: 12px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    flex:1;
+    min-width: 1px;
+    display: flex;
+    align-items: center;
+    // &:hover{
+    //     background-color: #ffffff1a;
+    // }
+}
+
+.conHeaderOpr{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    &:hover{
+        background-color: #ffffff1a;
+    }
+}
+
+.arrowDown{
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.arrowUp{
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.actions{
+    padding: 12px;
+    user-select: none;
+}
+
+.actionList{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+    }
+}
+
+.actionRow{
+    display: flex;
+    align-items: center;
+}
+
+.shellBlk{
+    
+    // border-radius: 8px;
+    :global{
+        .shiki{
+            border: 1px solid #ffffff1a;
+            background-color: #262626 !important;
+        }
+    }
+}
+
+
+.iAniSpin{
+    &::before{
+        animation: spin 2.5s linear infinite;
+        display: inline-block;
+    }
+}
+
+.fadeIn{
+    animation: fadeIn 2.5s linear infinite;
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.bugFix{
+    margin-left: 12px;
+    cursor: pointer;
+    color: var(--bolt-elements-textSecondary);
+}

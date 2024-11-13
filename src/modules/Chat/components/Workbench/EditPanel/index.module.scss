@@ -1,0 +1,139 @@
+.con{
+    color: #A3A3A3;
+}
+
+.bottom{
+    // height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.body{
+    flex:1;
+    min-height: 1px;
+    display: flex;
+    color: #A3A3A3;
+}
+
+
+.bodyLeft{
+    flex: 20 1 0px;
+    border-right: 1px solid #ffffff1a;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.identity{
+    padding: 4px 8px;
+    display: flex;
+    font-size: 14px;
+    height: 30px;
+    border-bottom: 1px solid #ffffff1a;
+    align-items: center;
+}
+
+
+.bodyRight{
+    flex: 80 1 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.identityFile{
+    padding: 4px 8px;
+    height: 30px;
+    display: flex;
+    font-size: 14px;
+    border-bottom: 1px solid #ffffff1a;
+    align-items: center;
+}
+
+.identityFileLeft{
+    color: #737373;
+    &:hover{
+        color: white;
+    }
+}
+
+.editorPanel{
+    flex:1;
+    min-height: 1px;
+}
+
+.treeCon{
+    flex:1;
+    min-height: 1px;
+    overflow-y: auto;
+}
+
+
+.bottomOpr{
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background-color: var(--bolt-elements-bg-depth-2);
+    // border-color: var(--bolt-elements-borderColor);
+    border-bottom: 1px solid var(--bolt-elements-borderColor);
+    border-top: 1px solid var(--bolt-elements-borderColor);
+}
+
+
+.headTab{
+    padding: 0 12px 0 0;
+    // background-color: #0A0A0A;
+    display: flex;
+    // border-bottom: 1px solid #ffffff1a;
+}
+
+.tabItem{
+    padding: 8px 12px;
+    
+    // border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0;
+    color: rgba(255,255,255,0.5);
+    border-radius: 9999px;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover{
+        // filter: brightness(.94);
+        // color: white;
+        background-color: var(--bolt-elements-terminals-buttonBackground);
+    }
+    &.activeTabItem{
+        background-color: var(--bolt-elements-terminals-buttonBackground);
+        color: var(--bolt-elements-textPrimary);;
+    }
+}
+
+.addBtn{
+    padding: 4px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--bolt-elements-item-backgroundActive);
+        color: var(--bolt-elements-item-contentActive);
+    }
+}
+
+.body{
+    flex:1;
+    min-height: 1px;
+}
+
+.terminal{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hidden{
+    display: none;
+}

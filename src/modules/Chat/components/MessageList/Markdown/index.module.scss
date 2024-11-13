@@ -12,7 +12,7 @@ $code-font-size: 13px;
   color: #ffffff;
 
   > *:not(:last-child) {
-    margin-block-end: 16px;
+    margin-block-end: 12px;
   }
 
   :global(.artifact) {
@@ -21,8 +21,8 @@ $code-font-size: 13px;
 
   :is(h1, h2, h3, h4, h5, h6) {
     @include not-inside-actions {
-      margin-block-start: 24px;
-      margin-block-end: 16px;
+      margin-block-start: 20px;
+      margin-block-end: 12px;
       font-weight: 600;
       line-height: 1.25;
       color: #ffffff;
@@ -63,7 +63,7 @@ $code-font-size: 13px;
 
     &:not(:last-of-type) {
       margin-block-start: 0;
-      margin-block-end: 16px;
+      margin-block-end: 12px;
     }
   }
 
@@ -90,7 +90,7 @@ $code-font-size: 13px;
   }
 
   pre {
-    padding: 20px 16px;
+    padding: 16px 12px;
     border-radius: 6px;
   }
 
@@ -113,7 +113,7 @@ $code-font-size: 13px;
     @include not-inside-actions {
       padding-left: 2em;
       margin-block-start: 0;
-      margin-block-end: 16px;
+      margin-block-end: 12px;
     }
   }
 
@@ -132,11 +132,11 @@ $code-font-size: 13px;
   li {
     @include not-inside-actions {
       & + li {
-        margin-block-start: 8px;
+        margin-block-start: 2px;
       }
 
       > *:not(:last-child) {
-        margin-block-end: 16px;
+        margin-block-end: 12px;
       }
     }
   }
@@ -157,7 +157,7 @@ $code-font-size: 13px;
   table {
     border-collapse: collapse;
     width: 100%;
-    margin-block-end: 16px;
+    margin-block-end: 12px;
 
     :is(th, td) {
       padding: 6px 13px;

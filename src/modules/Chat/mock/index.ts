@@ -1,7 +1,7 @@
 export default `I'll create a beautiful, modern Hello World page with a Chinese aesthetic.
 
-<boltArtifact id="chinese-hello-world" title="Modern Chinese-styled Hello World">
-<boltAction type="file" filePath="src/App.tsx">import { Globe2 } from 'lucide-react';
+<dalaranPage id="chinese-hello-world" title="Modern Chinese-styled Hello World">
+<dalaranAction type="file" filePath="src/App.tsx">import { Globe2 } from 'lucide-react';
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
   );
 }
 
-export default App;</boltAction>
-<boltAction type="file" filePath="index.html"><!doctype html>
+export default App;</dalaranAction>
+<dalaranAction type="file" filePath="index.html"><!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -42,11 +42,11 @@ export default App;</boltAction>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-</boltAction>
-<boltAction type="shell">
+</dalaranAction>
+<dalaranAction type="shell">
 <command>npm run dev</command>
-</boltAction>
-</boltArtifact>
+</dalaranAction>
+</dalaranPage>
 
 I've created a modern, minimalist Hello World page with Chinese characteristics:
 - Red color scheme (traditional Chinese lucky color)

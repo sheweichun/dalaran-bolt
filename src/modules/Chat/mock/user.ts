@@ -4,8 +4,8 @@ export default `
 Here is an artifact that contains all files of the project visible to you.
 Consider the contents of ALL files in the project.
 
-<boltArtifact id="project-import" title="Project Files">
-<boltAction type="file" filePath="eslint.config.js">import js from '@eslint/js';
+<dalaranPage id="project-import" title="Project Files">
+<dalaranAction type="file" filePath="eslint.config.js">import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -33,8 +33,8 @@ export default tseslint.config(
     },
   }
 );
-</boltAction>
-<boltAction type="file" filePath="index.html"><!doctype html>
+</dalaranAction>
+<dalaranAction type="file" filePath="index.html"><!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -47,8 +47,8 @@ export default tseslint.config(
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-</boltAction>
-<boltAction type="file" filePath="package.json">{
+</dalaranAction>
+<dalaranAction type="file" filePath="package.json">{
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
@@ -81,15 +81,15 @@ export default tseslint.config(
     "vite": "^5.4.2"
   }
 }
-</boltAction>
-<boltAction type="file" filePath="postcss.config.js">export default {
+</dalaranAction>
+<dalaranAction type="file" filePath="postcss.config.js">export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
   },
 };
-</boltAction>
-<boltAction type="file" filePath="tailwind.config.js">/** @type {import('tailwindcss').Config} */
+</dalaranAction>
+<dalaranAction type="file" filePath="tailwind.config.js">/** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -97,8 +97,8 @@ export default {
   },
   plugins: [],
 };
-</boltAction>
-<boltAction type="file" filePath="tsconfig.app.json">{
+</dalaranAction>
+<dalaranAction type="file" filePath="tsconfig.app.json">{
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -122,16 +122,16 @@ export default {
   },
   "include": ["src"]
 }
-</boltAction>
-<boltAction type="file" filePath="tsconfig.json">{
+</dalaranAction>
+<dalaranAction type="file" filePath="tsconfig.json">{
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ]
 }
-</boltAction>
-<boltAction type="file" filePath="tsconfig.node.json">{
+</dalaranAction>
+<dalaranAction type="file" filePath="tsconfig.node.json">{
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ES2023"],
@@ -153,14 +153,14 @@ export default {
   },
   "include": ["vite.config.ts"]
 }
-</boltAction><boltAction type="file" filePath="vite.config.ts">import { defineConfig } from 'vite';
+</dalaranAction><dalaranAction type="file" filePath="vite.config.ts">import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
 });
-</boltAction><boltAction type="file" filePath="src/App.tsx">import React from 'react';
+</dalaranAction><dalaranAction type="file" filePath="src/App.tsx">import React from 'react';
 
 function App() {
   return (
@@ -171,10 +171,10 @@ function App() {
 }
 
 export default App;
-</boltAction><boltAction type="file" filePath="src/index.css">@tailwind base;
+</dalaranAction><dalaranAction type="file" filePath="src/index.css">@tailwind base;
 @tailwind components;
 @tailwind utilities;
-</boltAction><boltAction type="file" filePath="src/main.tsx">import { StrictMode } from 'react';
+</dalaranAction><dalaranAction type="file" filePath="src/main.tsx">import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
@@ -184,11 +184,11 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>
 );
-</boltAction><boltAction type="file" filePath="src/vite-env.d.ts">/// <reference types="vite/client" />
-</boltAction></boltArtifact>
+</dalaranAction><dalaranAction type="file" filePath="src/vite-env.d.ts">/// <reference types="vite/client" />
+</dalaranAction></dalaranPage>
 
 Here is a list of files that exist on the file system but are not being shown to you:
 
   - .gitignore
-  - .bolt/prompt
+  - .dalaran/prompt
 `

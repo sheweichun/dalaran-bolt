@@ -1,16 +1,17 @@
 // import type { Message } from 'ai';
-import React, { type RefCallback } from 'react';
+import React, { useEffect, type RefCallback } from 'react';
 import { Button, Icon} from '@alifd/next'
 // import Attachment from '../Attachment'
-import { Message } from '../../models/message';
 import InputSvg from './inputSvg'
 import { AttachmentUpload, AttachmentList, IAttachment } from '../Attachment'
 // import { SendButton } from './SendButton.client';
 
 import styles from './index.module.scss';
 import MessageList from '../MessageList';
+import { IMessage } from '../MessageList/types';
 
 export interface PromptInputProps {
+  className?: string
   textareaRef?: React.RefObject<HTMLTextAreaElement> | undefined;
   messageRef?: RefCallback<HTMLDivElement> | undefined;
   scrollRef?: RefCallback<HTMLDivElement> | undefined;
@@ -20,7 +21,7 @@ export interface PromptInputProps {
   onAddFiles: (file: IAttachment[]) => void
   onDeleteFile?: (index: number) => void
   isStreaming?: boolean;
-  messages?: Message[];
+  messages: IMessage[];
   enhancingPrompt?: boolean;
   promptEnhanced?: boolean;
   input?: string;
@@ -31,11 +32,11 @@ export interface PromptInputProps {
 }
 
 const EXAMPLE_PROMPTS = [
-  { text: 'Build a todo app in React using Tailwind' },
+  { text: '创建一个todo list' },
   { text: 'Build a simple blog using Astro' },
   { text: 'Create a cookie consent form using Material UI' },
   { text: 'Make a space invaders game' },
-  { text: 'How do I center a div?' },
+  { text: '创建一个计数器' },
 ];
 
 const TEXTAREA_MIN_HEIGHT = 76;
@@ -59,16 +60,23 @@ export const PromptInput = React.forwardRef<HTMLDivElement, PromptInputProps>(
       sendMessage,
       handleInputChange,
       enhancePrompt,
+      className,
       handleStop,
     },
     ref,
   ) => {
     // const TEXTAREA_MAX_HEIGHT = chatStarted ? 400 : 200;
+    useEffect(()=>{
+      
+      // handleInputChange && handleInputChange('aaa')
+      //@ts-ignore
+      // sendMessage()
+    }, [])
 
     return (
       <div
         ref={ref}
-        className={styles.BaseChat}
+        className={`${styles.BaseChat} ${className || ''}`}
         data-chat-visible={showChat}
       >
         <div ref={scrollRef} className={styles.BaseChatScroll}>
@@ -86,7 +94,7 @@ export const PromptInput = React.forwardRef<HTMLDivElement, PromptInputProps>(
             <div
               className={`${styles.con} ${chatStarted ? styles.startedCon : ''}`}
             >
-              {chatStarted ? <MessageList></MessageList> : <></>}
+              {chatStarted ? <MessageList data={messages}></MessageList> : <></>}
               <div
                 style={{
                   position: 'relative',
@@ -192,7 +200,8 @@ export const PromptInput = React.forwardRef<HTMLDivElement, PromptInputProps>(
                         key={index}
                         onClick={(event) => {
                           event.preventDefault()
-                          sendMessage?.(event, examplePrompt.text);
+                          handleInputChange?.(examplePrompt.text);
+                          // sendMessage?.(event, examplePrompt.text);
                         }}
                         className={styles.exampleItem}
                       >

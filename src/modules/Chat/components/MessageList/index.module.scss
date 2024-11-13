@@ -66,4 +66,11 @@
 .attachment{
     display: flex;
     gap: 14px;
+    margin-bottom: 12px;
+}
+
+.prompt{
+    p{
+        margin-top: 0;
+    }
 }

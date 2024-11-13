@@ -61,7 +61,7 @@ const rehypeSanitizeOptions: RehypeSanitizeOptions = {
   tagNames: allowedHTMLElements,
   attributes: {
     ...defaultSchema.attributes,
-    div: [...(defaultSchema.attributes?.div ?? []), 'data*', ['className', '__boltArtifact__']],
+    div: [...(defaultSchema.attributes?.div ?? []), 'data*', ['className', '__dalaranPage__']],
   },
   strip: [],
 };
@@ -80,6 +80,7 @@ export function rehypePlugins(html: boolean) {
   const plugins: PluggableList = [];
 
   if (html) {
+    //@ts-ignore
     plugins.push(rehypeRaw, [rehypeSanitize, rehypeSanitizeOptions]);
   }
 

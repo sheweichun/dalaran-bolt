@@ -1,0 +1,36 @@
+
+.toolbar{
+    padding: 0 8px 0 12px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--bolt-elements-borderColor);
+    color: var(--bolt-elements-item-contentDefault);
+    
+}
+
+.opr{
+    padding: 2px 6px;
+    border-radius: 6px;
+    display: flex;
+    cursor: pointer;
+    &:hover{
+        color: var(--bolt-elements-item-contentActive);
+        background-color: var(--bolt-elements-item-backgroundActive);
+    }
+}
+
+.iframe{
+    border: 0;
+    // width: 100%;
+    // height: 100%;
+    flex:1;
+    min-height: 1px;
+}
+
+.con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

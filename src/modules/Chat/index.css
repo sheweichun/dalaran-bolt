@@ -1,8 +1,9 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
 	font-family: 'iconfont';  /* Project id 4727410 */
-	src: url('//at.alicdn.com/t/a/font_4727410_lfo42fe7p2j.woff2?t=1730186487092') format('woff2'),
-		 url('//at.alicdn.com/t/a/font_4727410_lfo42fe7p2j.woff?t=1730186487092') format('woff'),
-		 url('//at.alicdn.com/t/a/font_4727410_lfo42fe7p2j.ttf?t=1730186487092') format('truetype');
+	src: url('//at.alicdn.com/t/a/font_4727410_4qnf2c23p3.woff2?t=1731489390043') format('woff2'),
+		 url('//at.alicdn.com/t/a/font_4727410_4qnf2c23p3.woff?t=1731489390043') format('woff'),
+		 url('//at.alicdn.com/t/a/font_4727410_4qnf2c23p3.ttf?t=1731489390043') format('truetype');
   }
 
 
@@ -13,6 +14,15 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+.pointer{
+	cursor: pointer;
+}
+
+.icon.icon-small{
+	font-size: 12px;
+}
+
 .icon-stop-circle:before {
 	font-size: 20px;
 	content: "\e8e4";
@@ -21,9 +31,86 @@
 .icon-right:before {
 	content: "\e7eb";
 }
+
+.icon-down:before {
+	display: inline-block;
+	transform: rotate(90deg);
+	content: "\e7eb";
+}
+
+.icon-up:before {
+	display: inline-block;
+	transform: rotate(-90deg);
+	content: "\e7eb";
+}
+
 .icon-attachment:before {
 	content: "\e60a";
 }
 .icon-stars:before {
 	content: "\e6a3";
+}
+
+
+
+.icon-fail:before {
+	content: "\e6d7";
+}
+
+.icon-pending:before {
+	content: "\e613";
+}
+
+.icon-check:before {
+	content: "\e6f2";
+}
+
+.icon-running:before {
+	content: "\e761";
+}
+
+
+.icon-red{
+	color: #F87171;
+}
+
+.icon-green{
+	color: #4ade80;
+}
+
+
+.icon-network:before{
+	content: '\e658';
+}
+
+.icon-deploy:before{
+	content: '\e616';
+}
+
+.icon-file:before{
+	content: '\e7bb';
+}
+
+.icon-terminal:before{
+	content: '\e864';
+}
+
+.icon-refresh:before{
+	content: '\e71e';
+}
+
+.icon-plus:before{
+	content: '\e8fe';
+}
+
+.icon-tree:before{
+	content: "\ebbf";
+}
+
+.icon-light:before{
+	content: "\e6b8";
+}
+
+.icon-bug:before{
+	content: "\e6f9";
 }
