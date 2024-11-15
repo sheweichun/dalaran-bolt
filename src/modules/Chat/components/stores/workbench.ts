@@ -33,6 +33,14 @@ class ArtifactItem implements ArtifactState{
         this.runner = new ActionRunner(this);
         this.updateView = this.updateView.bind(this)
     }
+    getRunnedCommands(){
+      const { actions } = this.runner
+      return Object.keys(actions).map((name)=>actions[name]).filter(item=>item.status === 'complete')
+    }
+    getRunningCommands(){
+      const { actions } = this.runner
+      return Object.keys(actions).map((name)=>actions[name]).filter(item=>item.status === 'running')
+    }
     update(state:Partial<ArtifactUpdateState>, onComplate?: ()=>void){
       if(!state) return
       if(state.title != undefined){
@@ -79,6 +87,18 @@ class _WorkbenchStore{
     }
     getCurArtifact(){
       return this._getArtifact(this.curArtifactId)
+    }
+    getCommandPrompt(){
+      const { artifacts } = this
+      const runingCommandList: string[] = [], runnedCommandList: string[] = []
+      Object.keys(this.artifacts).forEach((id)=>{
+        const artifact = artifacts[id]
+        const runningCommand = artifact.getRunningCommands()
+        const runnedCommand = artifact.getRunnedCommands()
+        runingCommandList.push(...runningCommand.map(item=>item.content))
+        runnedCommandList.push(...runnedCommand.map(item=>item.content))
+      })
+      return `<runningCommand>${runingCommandList.join('\n')}</runningCommand><runnedCommand>${runnedCommandList.join('\n')}</runnedCommand>`
     }
     addArtifact({ title, id }: ArtifactCallbackData) {
         const artifact = this._getArtifact(id);

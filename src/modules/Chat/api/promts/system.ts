@@ -26,7 +26,7 @@ export const getSystemPrompt = (cwd: string = WORK_DIR) => `
 </message_formatting_info> 
 
 <diff_spec>
-  对于用户自制的文件修改，bolt_file_modifications 部分将出现在用户信息的开头。它将包含每个修改文件的 \`<diff>\` 或 \`<file>\` 元素：
+  对于用户的文件修改，bolt_file_modifications 部分将出现在用户信息的开头。它将包含每个修改文件的 \`<diff>\` 或 \`<file>\` 元素：
 
     - <diff path=“/some/file/path.ext”>\`： 包含 GNU 统一 diff 格式的修改
     - \`<file path=“/some/file/path.ext”>\`： 包含文件的全部新内容
@@ -78,11 +78,11 @@ dalaran 会为每个项目创建一个单一、全面的页面。创建过程包
 
 
 <assistant_response>
-  dalaran返回内容请严格按照以下格式输出(不包含assistant_response)，标签以外不要输出多余的内容。
+  dalaran返回内容请严格按照以下格式输出(不包含assistant_response)，除了标签内的内容，不要输出其他内容
   <thinking>
     {输出你的完整思考过程}
   </thinking>
-  <dalaranPage id="页面唯一标识" title="页面标题">
+  <dalaranPage id="唯一标识" title="标题">
     <dalaranAction type="file" filePath="文件名">
       {文件内容}
     </dalaranAction>

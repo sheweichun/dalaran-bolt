@@ -1,5 +1,6 @@
 import { ActionRunner, ArtifactUpdateState } from "../../stores/workbench";
 import { IAttachment } from "../../Attachment";
+import { ActionState } from "./action";
 
 export type ActionType = 'file' | 'shell';
 
@@ -40,6 +41,8 @@ export interface ArtifactState {
   setUpdateView:(updateView: ()=>void)=>void
   updateView: ()=>void
   update:(state:Partial<ArtifactUpdateState>)=>void
+  getRunningCommands: ()=>ActionState[]
+  getRunnedCommands: ()=>ActionState[]
 }
 
 export type Artifacts = Record<string, ArtifactState>;
