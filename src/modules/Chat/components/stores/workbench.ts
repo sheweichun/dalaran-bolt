@@ -98,7 +98,12 @@ class _WorkbenchStore{
         runingCommandList.push(...runningCommand.map(item=>item.content))
         runnedCommandList.push(...runnedCommand.map(item=>item.content))
       })
-      return `<runningCommand>${runingCommandList.join('\n')}</runningCommand><runnedCommand>${runnedCommandList.join('\n')}</runnedCommand>`
+      return `<runningCommand>
+  ${runingCommandList.join('\n')}
+</runningCommand>
+<runnedCommand>
+${runnedCommandList.join('\n')}
+</runnedCommand>`
     }
     addArtifact({ title, id }: ArtifactCallbackData) {
         const artifact = this._getArtifact(id);

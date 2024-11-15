@@ -33,7 +33,7 @@ export interface PromptInputProps {
 
 const EXAMPLE_PROMPTS = [
   { text: '创建一个todo list' },
-  { text: 'Build a simple blog using Astro' },
+  { text: '创建一个商品管理页' },
   { text: 'Create a cookie consent form using Material UI' },
   { text: 'Make a space invaders game' },
   { text: '创建一个计数器' },

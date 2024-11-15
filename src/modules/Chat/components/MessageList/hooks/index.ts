@@ -115,16 +115,15 @@ export interface ChatParams{
   attachments?:IAttachment[]
 }
 
-function transformParam2LLMMessage(params: ChatParams){
+function transformParam2LLMMessage(params: ChatParams, prefixPrompt = `<running_commands>
+</running_commands>`){
   const message: {role: string, content: string, experimental_attachments?: {
       name: string,
       contentType: string,
       url: string
   }[]} = {
       role: 'user',
-      content: `<running_commands>
-</running_commands>
-
+      content: `${prefixPrompt}
 ${params.prompt}`,
   }
   if(params.attachments){
@@ -220,7 +219,7 @@ export function useChat({ fileMap }: ChatProp){
         llmMessages.push(wrapLLMMessage(lastLLMQueryAndRespnse.response, 'assistant'))
       }
     }
-    llmMessages.push(transformParam2LLMMessage({prompt: input, attachments: files}))
+    llmMessages.push(transformParam2LLMMessage({prompt: input, attachments: files}, WorkbenchStore.getCommandPrompt()))
 		const assitant = await requestLLM(llmMessages, prevMessage)
     lastLLMQueryAndRespnseRef.current = {
       query: {
